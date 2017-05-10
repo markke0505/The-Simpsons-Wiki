@@ -1,7 +1,7 @@
 {
-  "name": "webhook-echo-sample",
+  "name": "Google-Action-Test",
   "version": "1.0.0",
-  "description": "Webhook echo sample",
+  "description": "Google Action Test",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
