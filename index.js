@@ -15,7 +15,7 @@ restService.post('/ask-character', function(req, res) {
     var speech = req.body.result.parameters.character
     var answer
     
-    if (character == "Homer Simpson"){
+    if (character == "homer simpson"){
         answer = "He is the big daddy"
     }
     else{
