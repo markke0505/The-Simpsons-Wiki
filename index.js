@@ -27,7 +27,7 @@ restService.post('/ask-character', function(req, res) {
     else if (characterName == "lisa simpson"){
         answer = "She is the good girl of the house"
     }
-    else if (characterName == 'maggie simpson"){
+    else if (characterName == "maggie simpson"){
         answer = "She if the clever baby of the house"
     }
     else{
