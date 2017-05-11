@@ -17,6 +17,9 @@ This simple app will help you understand
 Open API.AI portal - https://api.ai
 - Create an account and login
 
+Test on Google Home Web Simulator
+- Test on Google Home Web Simulator https://developers.google.com/actions/tools/web-simulator
+
 # Video
 Watch this video to learn the steps to create sample application.
 
