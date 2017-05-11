@@ -11,12 +11,12 @@ restService.use(bodyParser.urlencoded({
 
 restService.use(bodyParser.json());
 
-restService.post('/google-action-test', function(req, res) {
-    var speech = req.body.result.parameters.echoText
+restService.post('/ask-character', function(req, res) {
+    var speech = req.body.result.parameters.character
     var answer
     
-    if (speech == "Motherfucker"){
-        answer = "Hey, please do not curse!"
+    if (character == "Homer Simpson"){
+        answer = "He is the big daddy"
     }
     else{
         answer = "Whatever!"
@@ -25,7 +25,7 @@ restService.post('/google-action-test', function(req, res) {
     return res.json({
         speech: answer,
         displayText: speech,
-        source: 'google-action-test-source'
+        source: 'ask-character-source'
     });
 });
 
