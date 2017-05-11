@@ -12,9 +12,18 @@ restService.use(bodyParser.urlencoded({
 restService.use(bodyParser.json());
 
 restService.post('/google-action-test', function(req, res) {
-    var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
+    var speech = req.body.result.parameters.echoText
+    var answer
+    
+    if (speech == "Motherfucker"){
+        answer = "Hey, please do not curse!"
+    }
+    else{
+        answer = "Whatever!"
+    }
+    
     return res.json({
-        speech: speech,
+        speech: answer,
         displayText: speech,
         source: 'google-action-test-source'
     });
