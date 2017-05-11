@@ -12,20 +12,18 @@ restService.use(bodyParser.urlencoded({
 restService.use(bodyParser.json());
 
 restService.post('/ask-character', function(req, res) {
-    /*
-    var speech = req.body.result.parameters.character
+    var characterName = req.body.result.parameters.character
     var answer
     
-    if (speech == "homer simpson"){
+    if (characterName == "homer simpson"){
         answer = "He is the big daddy"
     }
     else{
         answer = "Whatever!"
     }
-    */
     return res.json({
-        speech: "shit",
-        displayText: "shit",
+        speech: answer,
+        displayText: answer,
         source: 'ask-character-source'
     });
 });
