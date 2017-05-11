@@ -12,6 +12,7 @@ restService.use(bodyParser.urlencoded({
 restService.use(bodyParser.json());
 
 restService.post('/ask-character', function(req, res) {
+    /*
     var speech = req.body.result.parameters.character
     var answer
     
@@ -21,10 +22,10 @@ restService.post('/ask-character', function(req, res) {
     else{
         answer = "Whatever!"
     }
-    
+    */
     return res.json({
-        speech: answer,
-        displayText: speech,
+        speech: "shit",
+        displayText: "shit",
         source: 'ask-character-source'
     });
 });
