@@ -1,7 +1,7 @@
 {
-  "name": "Google-Action-Test",
+  "name": "The-Simpsons-Wiki",
   "version": "1.0.0",
-  "description": "Google Action Test",
+  "description": "The Simpsons Wiki",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
