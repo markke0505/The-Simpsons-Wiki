@@ -16,7 +16,19 @@ restService.post('/ask-character', function(req, res) {
     var answer
     
     if (characterName == "homer simpson"){
-        answer = "He is the big daddy"
+        answer = "He is the man of the house"
+    }
+    else if (characterName == "marge simpson"){
+        answer = "She is the woman of the house"
+    }
+    else if (characterName == "bart simpson"){
+        answer = "He is the naughty boy of the house"         
+    }
+    else if (characterName == "lisa simpson"){
+        answer = "She is the good girl of the house"
+    }
+    else if (characterName == 'maggie simpson"){
+        answer = "She if the clever baby of the house"
     }
     else{
         answer = "Whatever!"
@@ -28,7 +40,7 @@ restService.post('/ask-character', function(req, res) {
     });
 });
 
-
+/*
 restService.post('/google-action-test', function(req, res) {
     var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
     return res.json({
@@ -37,65 +49,7 @@ restService.post('/google-action-test', function(req, res) {
         source: 'google-action-test-source'
     });
 });
-
-
-/*
-restService.post('/slack-test', function(req, res) {
-
-    var slack_message = {
-        "text": "Details of JIRA board for Browse and Commerce",
-        "attachments": [{
-            "title": "JIRA Board",
-            "title_link": "http://www.google.com",
-            "color": "#36a64f",
-
-            "fields": [{
-                "title": "Epic Count",
-                "value": "50",
-                "short": "false"
-            }, {
-                "title": "Story Count",
-                "value": "40",
-                "short": "false"
-            }],
-
-            "thumb_url": "https://stiltsoft.com/blog/wp-content/uploads/2016/01/5.jira_.png"
-        }, {
-            "title": "Story status count",
-            "title_link": "http://www.google.com",
-            "color": "#f49e42",
-
-            "fields": [{
-                "title": "Not started",
-                "value": "50",
-                "short": "false"
-            }, {
-                "title": "Development",
-                "value": "40",
-                "short": "false"
-            }, {
-                "title": "Development",
-                "value": "40",
-                "short": "false"
-            }, {
-                "title": "Development",
-                "value": "40",
-                "short": "false"
-            }]
-        }]
-    }
-    return res.json({
-        speech: "speech",
-        displayText: "speech",
-        source: 'webhook-echo-sample',
-        data: {
-            "slack": slack_message
-        }
-    });
-});
 */
-
-
 
 restService.listen((process.env.PORT || 8000), function() {
     console.log("Server up and listening");
